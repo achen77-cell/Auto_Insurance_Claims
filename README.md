@@ -2,9 +2,12 @@
 ## Auto Insurance Fraud Detection
 
 ### Team - Proaggresive Insurance
-Product Manager: Nehal Jain n/
+Product Manager: Nehal Jain
+
 Business Analyst: Christina Ming
+
 Data Analyst: Nancy Samuel, Gayatri Krishnamoorthy
+
 Data Scientist: Juliana Liu, Aishwarya Rao, Xinyi Hu
 
 ### Use Case Overview
