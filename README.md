@@ -1,7 +1,7 @@
 # Group 6 - INSY 695 Project 
 ## Auto Insurance Fraud Detection
 
-### Team - Proaggresive Insurance
+### Team
 Product Manager: Nehal Jain
 
 Business Analyst: Christina Ming
