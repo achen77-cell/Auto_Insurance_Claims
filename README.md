@@ -134,10 +134,13 @@ Company is likely to incur more loses because of false negatives than false posi
 <img width="708" alt="Screen Shot 2022-02-23 at 10 03 05 PM" src="https://user-images.githubusercontent.com/90296247/155450034-77f7deb1-2e40-4233-9f1b-9c7016d415ac.png">
 
 To measure the performance of our best model, we are looking at several evaluation metrics here.
-And as we can see from the confusion matrix, our test dataset contains 2240 observations, among the 131 number of fraud cases presented here, the model successfully identify 122, which is a 93% of accuracy here.  By looking at the ROC curve, we see a AUC of 0.8, which means that there is a 80% chance that our model will be able to distinguish between non-fraud class and fraudulent class.  
+And as we can see from the confusion matrix, our test dataset contains 2240 observations, among the 131 number of fraud cases presented here, the model successfully identify 122, which is a 93% of accuracy here.  By looking at the ROC curve, we see a AUC of 0.8, which means that there is a 80% chance that our model will be able to distinguish between non-fraud class and fraudulent class.
+
 <img width="703" alt="Screen Shot 2022-02-23 at 10 04 21 PM" src="https://user-images.githubusercontent.com/90296247/155450044-52ddf7c7-f4a2-41f0-8353-c7198adf2651.png">
+
 From the combination of feature importance and shap value plots, we can see how some features affect the target variable
 BasePolicy and Fault are the two most important features contributing to the output most. As for BasePolicy, certain coverage type, like Liability has negative influence on the output, it’s less likely to find fraud in this category. As for Fault, if Third Party is deemed at fault, it will have negative influence on the output. It makes sense because PolicyHolders are less motivated by the fact that they are not at fault to claim fraud insurance. 
+
 <img width="685" alt="Screen Shot 2022-02-23 at 10 04 46 PM" src="https://user-images.githubusercontent.com/90296247/155450052-4d659cf5-2321-4559-8f67-e4c3d003d5c2.png">
 
 
