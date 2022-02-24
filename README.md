@@ -12,7 +12,7 @@ We are a data science team at Proaggresive Insurance. As an insurance company, i
 
 It is believed that a model with a good recall would be prioritized over one with a good accuracy or precision because we aim to detect as many fraudulent cases as possible considering the downside of not detecting one is larger than the other way around. If successful, suspicious claims can be flagged immediately for further review and more accurate judgement involving domain knowledge, while the others can be processed as usual, which could help reduce huge labor costs spent on manual investigation of the initial stage and potential loss due to fraudulent claims.
 
-### Hypothsis / Problem statement
+### Hypothesis / Problem statement
 Traditionally businesses relied on rules alone to block fraudulent claims. However, rules are rigid and can cause problems: 
 -  When there are lots of rules, it tends to result in a high number of false positives: meaning you’re likely to block a lot of genuine customers.
 -  Rules have fixed filters/outcomes and they are risky since the thresholds can change over time,so they aren’t robust.
