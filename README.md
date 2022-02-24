@@ -101,10 +101,50 @@ Since our dataset was hugely imbalanced with only 6% of the target variable bein
 
 #### Step 8: Feature selection
 We run a feature selection with random forest to identify the importance of each of these variables in predicting whther the claim would be fraudulent or not. We currently have not removed any features from the model to test these in the modelling phase.
-
 ![image](https://user-images.githubusercontent.com/70802118/155265914-6e61b751-6a54-4ebc-a257-837da320de7d.png)
 
 We then proceed on the modelling phase where we applied standard machine learning classification algorithms that can be fit successfully on the transformed datasets.
+
+### Modeling
+Models chosen mainly are tree based model as they inherently prevent overfitting and dont require feature selection explicitly. 
+- A] Random Forest
+Random Forests implicitly perform feature selection and generate uncorrelated decision trees.
+Not influenced by outliers
+Balance the bias-variance trade-off well.
+- B] XGBoost
+Misclassified observations from each model are up-weighed
+Lightning speed
+High accuracies
+- C] Adaboost
+ Robust to overfitting in low noise datasets 
+- D] GaussianNB
+A conditional probabilistic classification model that considers each of the features in the dataset to contribute independently to the probability of the class of the tumor regardless of any possible correlation between the above-mentioned associations.
+- E] KNN
+Determines neighborhoods based on distance metric.
+Quick calculation time
+Allows it to immediately adapt to new training data
+
+Performance metrics
+Chosen recall as our performance metric
+Preference given to Recall over Precision as focus is on false negatives over false positives
+False negative: Claim is fraudulent but the model didnt predict it to be
+False Positive: Claim is not fraudulent but model predicted it to be
+Company is likely to incur more loses because of false negatives than false positives
+
+<img width="708" alt="Screen Shot 2022-02-23 at 10 03 05 PM" src="https://user-images.githubusercontent.com/90296247/155450034-77f7deb1-2e40-4233-9f1b-9c7016d415ac.png">
+
+To measure the performance of our best model, we are looking at several evaluation metrics here.
+And as we can see from the confusion matrix, our test dataset contains 2240 observations, among the 131 number of fraud cases presented here, the model successfully identify 122, which is a 93% of accuracy here.  By looking at the ROC curve, we see a AUC of 0.8, which means that there is a 80% chance that our model will be able to distinguish between non-fraud class and fraudulent class.  
+<img width="703" alt="Screen Shot 2022-02-23 at 10 04 21 PM" src="https://user-images.githubusercontent.com/90296247/155450044-52ddf7c7-f4a2-41f0-8353-c7198adf2651.png">
+From the combination of feature importance and shap value plots, we can see how some features affect the target variable
+BasePolicy and Fault are the two most important features contributing to the output most. As for BasePolicy, certain coverage type, like Liability has negative influence on the output, it’s less likely to find fraud in this category. As for Fault, if Third Party is deemed at fault, it will have negative influence on the output. It makes sense because PolicyHolders are less motivated by the fact that they are not at fault to claim fraud insurance. 
+<img width="685" alt="Screen Shot 2022-02-23 at 10 04 46 PM" src="https://user-images.githubusercontent.com/90296247/155450052-4d659cf5-2321-4559-8f67-e4c3d003d5c2.png">
+
+
+
+
+
+
 
 
 
