@@ -124,7 +124,7 @@ Below table summarizes the effect of all treatment variables on outcome- FraudFo
 The first five variables have a p-value less than 0.001, indicating a causal effect on determining a fraudulent case, but the same cannot be said about other variables.
 
 ### Conclusion
-- Model can accurately predict XYZ% of fraudulent cases.
+- Model can accurately predict 93% of fraudulent cases.
 - The major indicators of a fraudulent case are Policy Holder’s Fault, Collision Base Policy, Higher Vehicle Price Range, higher past number of claims made.
 ### Threats to Validity
 - Limited Data from past years: The data used to create the model dates few years back and the patterns might change over the years. Hence, it might not guarantee the same performance. 
