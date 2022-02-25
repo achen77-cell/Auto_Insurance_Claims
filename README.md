@@ -29,40 +29,8 @@ We will evaluate this under various analyses mentioned below.
 ### Dataset
 This dataset is retrieved from Kaggle with a binary target variable, FraudFound_P, for which 1 means that the claim application is fraudulent and 0 means otherwise. 
 
-Besides the target variable, it also contains features below:
-
-MonthOfAccident <br />
-WeekOfMonthOfAccident <br />
-DayOfWeekOfAccident <br />
-Make <br />
-AccidentArea <br />
-DayOfWeekClaimed <br />
-MonthClaimed <br />
-WeekOfMonthClaimed <br />
-Sex <br />
-MaritalStatus <br />
-AgeOfPolicyHolder <br />
-Fault <br />
-PolicyType <br />
-VehicleCategory <br />
-VehiclePriceRange <br />
-PolicyNumber <br />
-RepNumber <br />
-Deductible <br />
-DriverRating <br />
-Days_Policy_Accident <br />
-Days_Policy_Claim <br />
-PastNumberOfClaims <br />
-AgeOfVehicle <br />
-AgeRangeOfPolicyHolder <br />
-PoliceReportFiled <br />
-WitnessPresent <br />
-AgentType <br />
-NumberOfSuppliments <br />
-AddressChange_Claim <br />
-NumberOfCars <br />
-Year <br />
-BasePolicy <br />
+A dictionary of all the fields and their descriptions is given below:
+![DataDictionary](https://user-images.githubusercontent.com/70802118/155792207-db6b7838-d1b4-4fbd-acb6-69dc9dcde808.PNG)
 
 ### [Data Preparation](https://github.com/McGill-MMA-EnterpriseAnalytics/Auto_Insurance_Claims/blob/main/PreProcessing/Data%20Preparation.ipynb)
 
