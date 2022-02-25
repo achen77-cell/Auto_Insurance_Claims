@@ -111,7 +111,7 @@ Models chosen mainly are tree based model as they inherently prevent overfitting
 Random Forests implicitly perform feature selection and generate uncorrelated decision trees.
 Not influenced by outliers
 Balance the bias-variance trade-off well.
-- B] XGBoost
+- B] XGBoost [Code](https://github.com/McGill-MMA-EnterpriseAnalytics/Auto_Insurance_Claims/blob/main/Modeling/Modelling_XGBoost.ipynb)
 Misclassified observations from each model are up-weighed
 Lightning speed
 High accuracies
