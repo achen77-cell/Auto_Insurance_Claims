@@ -113,6 +113,39 @@ BasePolicy and Fault are the two most important features contributing to the out
 
 <img width="685" alt="Screen Shot 2022-02-23 at 10 04 46 PM" src="https://user-images.githubusercontent.com/90296247/155450052-4d659cf5-2321-4559-8f67-e4c3d003d5c2.png">
 
+### [Causal Analysis](https://github.com/McGill-MMA-EnterpriseAnalytics/Auto_Insurance_Claims/blob/main/CausalAnalysis/Causal_Inference.ipynb)
+To determine whether the important features actually had a causal relationship with the outcome “FraudFound_P” variable, we performed a Causal Analysis using DoWhy library using the features: “VehicleCategory”, “AgeOfPolicyHolder”, “DriverRating”, “PoliceReportFiled”, “Make”, “AccidentArea”, “Fault”, “PolicyType”, “VehiclePriceRange”, “PastNumberOfClaims”, “AgeOfVehicle”, “AgentType”, “NumberOfCars”, “BasePolicy”.
+A causal model was created using the as shown below, each variable was considered as a treatment variable and its effect were analyzed.
+ 
+Below table summarizes the effect of all treatment variables on outcome- FraudFound_P.
+Feature	P-Values	Estimate
+Fault	0.000	-0.07
+PolicyType	0.000	-0.037
+Past Number Of Claims	0.000	-0.003
+Make	0.000	-0.001
+Vehicle Price Range	0.000	0.002
+AccidentArea	0.005	-0.027
+Base Policy	0.030	-0.042
+Age Of Vehicle	0.043	-0.004
+Police Report Filed	0.085	-0.005
+Age Of Policy Holder	0.429	-0.004
+Number Of Cars	0.434	0.001
+DriverRating	0.642	0.001
+Agent Type	0.666	-0.02
+Vehicle Category	0.856	-0.037
+
+The first five variables have a p-value less than 0.001, indicating a causal effect on determining a fraudulent case, but the same cannot be said about other variables.
+
+### Conclusion
+- Model can accurately predict XYZ% of fraudulent cases.
+- The major indicators of a fraudulent case are Policy Holder’s Fault, Collision Base Policy, Higher Vehicle Price Range, higher past number of claims made.
+### Threats to Validity
+- Limited Data from past years: The data used to create the model dates few years back and the patterns might change over the years. Hence, it might not guarantee the same performance. 
+- Inspectability Issues: Even though causal analysis helps in determining the key factors affecting the outcome, it cannot pinpoint to what can be exactly states as a reason for rejection, which point to the fact that Claim approvers might land up in a difficult situation when they have to explain to the customers in what grounds their claim was rejected.
+### Future Steps
+- Ensemble Anomaly detection – Current model incurs a heavy cost as it is a supervised model, and requires each case to be investigated and analyzed to determine whether they were actually fraudulent. As an alternative option, an ensemble anomaly detection system can be designed which does not data to be tagged. 
+- Incorporate more recent and demographics data, prior customer profile like Risk profile: This can help improving the performance of the model and more accurately predicting the fraudulent cases.
+
 
 
 
