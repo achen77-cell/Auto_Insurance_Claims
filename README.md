@@ -5,12 +5,14 @@
 Product Manager: Nehal Jain <br />Business Analyst: Christina Ming <br /> Data Analyst: Nancy Samuel, Gayatri Krishnamoorthy <br /> Data Scientist: Juliana Liu, Aishwarya Rao, Xinyi Hu
 
 ### Use Case Overview
-We are a data science team at Proaggresive Insurance. As an insurance company, it is often costly and time-consuming to resolve issues like insurance fraud afterwards. So it has become increasingly critical to predict and distinguish fraudulent claims leveraging predictive modelling. And we are very interested in understanding what it takes to detect insurance fraud before a payment is made by asking the following questions:
+We are a data science team at Proaggresive Insurance. As an insurance company, it is often costly and time-consuming to resolve issues like insurance fraud afterwards. The industry has gone into a price hardening cycle. Competition is getting fierce with online-focused discount insurers entering the market. Industry revenue declined 5.0% in 2020 as a result of lower investment income and consumer confidence during the pandemic. According to the latest available information from comScore, 37.0% of consumers are likely to purchase auto insurance online in the future. In a changing market where people are able to file claims online by taking pictures for payments to be made, insurers have been very vulnerable to staged accidents. For example, auto insurers lose at least $29 billion a year due to premium leakage, according to Verisk.
 
-1. How likely is a claim fraudulent or not?
-2. What factors can be used to determine whether a claim is fraudulent?
+Therefore, facing such an online-focused strategy shift, it has become increasingly critical to predict and distinguish fraudulent claims leveraging predictive modelling and causal analysis. And we are very interested in understanding what it takes to detect insurance fraud before a payment is made by asking the following questions:
 
-It is believed that a model with a good recall would be prioritized over one with a good accuracy or precision because we aim to detect as many fraudulent cases as possible considering the downside of not detecting one is larger than the other way around. If successful, suspicious claims can be flagged immediately for further review and more accurate judgement involving domain knowledge, while the others can be processed as usual, which could help reduce huge labor costs spent on manual investigation of the initial stage and potential loss due to fraudulent claims.
+1. How likely is a claim fraudulent or not (using a classification model)?
+2. What factors can be used to determine whether a claim is fraudulent (through causal inference)?
+
+It is believed that a model with a good recall would be prioritized over one with a good accuracy or precision because we aim to detect as many fraudulent cases as possible considering the downside of not detecting one is larger than the other way around. If successful, suspicious claims can be flagged immediately for further review and more accurate judgement involving domain knowledge, while the others can be processed as usual, which could help reduce huge labor costs spent on manual investigation at the initial stage and potential loss due to fraudulent claims.
 
 ### Hypothesis / Problem statement
 Traditionally businesses relied on rules alone to block fraudulent claims. However, rules are rigid and can cause problems: 
@@ -111,7 +113,7 @@ Models chosen mainly are tree based model as they inherently prevent overfitting
 Random Forests implicitly perform feature selection and generate uncorrelated decision trees.
 Not influenced by outliers
 Balance the bias-variance trade-off well.
-- B] XGBoost [Code](https://github.com/McGill-MMA-EnterpriseAnalytics/Auto_Insurance_Claims/blob/main/Modeling/Modelling_XGBoost.ipynb)
+- B] XGBoost
 Misclassified observations from each model are up-weighed
 Lightning speed
 High accuracies
@@ -124,11 +126,11 @@ Determines neighborhoods based on distance metric.
 Quick calculation time
 Allows it to immediately adapt to new training data
 
-Performance metrics
-Chosen recall as our performance metric
-Preference given to Recall over Precision as focus is on false negatives over false positives
-False negative: Claim is fraudulent but the model didnt predict it to be
-False Positive: Claim is not fraudulent but model predicted it to be
+Performance metrics <br />
+Chosen recall as our performance metric  <br />
+Preference given to Recall over Precision as focus is on false negatives over false positives  <br />
+False negative: Claim is fraudulent but the model didnt predict it to be  <br />
+False Positive: Claim is not fraudulent but model predicted it to be  <br />
 Company is likely to incur more loses because of false negatives than false positives
 
 <img width="708" alt="Screen Shot 2022-02-23 at 10 03 05 PM" src="https://user-images.githubusercontent.com/90296247/155450034-77f7deb1-2e40-4233-9f1b-9c7016d415ac.png">
