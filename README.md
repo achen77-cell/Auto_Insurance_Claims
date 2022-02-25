@@ -2,7 +2,7 @@
 ## Auto Insurance Fraud Detection
 
 ### Our Team
-Product Manager: Nehal Jain <br />Business Analyst: Christina Ming <br /> Data Analyst: Nancy Samuel, Gayatri Krishnamoorthy <br /> Data Scientist: Juliana Liu, Aishwarya Rao, Xinyi Hu
+![image](https://user-images.githubusercontent.com/70802118/155797633-3cf07374-e0ea-44ba-b9de-4df9b36d6b80.png)
 
 ### Use Case Overview
 We are a data science team at Proaggresive Insurance. As an insurance company, it is often costly and time-consuming to resolve issues like insurance fraud afterwards. The industry has gone into a price hardening cycle. Competition is getting fierce with online-focused discount insurers entering the market. Industry revenue declined 5.0% in 2020 as a result of lower investment income and consumer confidence during the pandemic. According to the latest available information from comScore, 37.0% of consumers are likely to purchase auto insurance online in the future. In a changing market where people are able to file claims online by taking pictures for payments to be made, insurers have been very vulnerable to staged accidents. For example, auto insurers lose at least $29 billion a year due to premium leakage, according to Verisk.
