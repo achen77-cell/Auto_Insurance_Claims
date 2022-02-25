@@ -120,9 +120,7 @@ A causal model was created using the as shown below, each variable was considere
 ![image](https://user-images.githubusercontent.com/75080569/155793644-b0b8084d-68f4-4815-b6f6-7199344d6656.png)
 
 Below table summarizes the effect of all treatment variables on outcome- FraudFound_P.
-
-![image](https://user-images.githubusercontent.com/75080569/155793826-41c5da08-b92e-4bd5-8eb0-c2c2248b76c8.png)
-
+![image](https://user-images.githubusercontent.com/75080569/155794784-047237fc-b228-4372-a490-4e4bc35fe31a.png)
 The first five variables have a p-value less than 0.001, indicating a causal effect on determining a fraudulent case, but the same cannot be said about other variables.
 
 ### Conclusion
