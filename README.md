@@ -62,7 +62,7 @@ NumberOfCars <br />
 Year <br />
 BasePolicy <br />
 
-### Data Preparation
+### [Data Preparation](https://github.com/McGill-MMA-EnterpriseAnalytics/Auto_Insurance_Claims/blob/main/PreProcessing/Data%20Preparation.ipynb)
 
 Prior to beginning our data preparation, we first perform a stratified split which divides the datset into train, validation and test to maintain the ratio of our target variable FraudFound_P. Post that, we create a transformation pipeline to apply the data preparation steps to train, validation and test datasets.
 
