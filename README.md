@@ -116,23 +116,12 @@ BasePolicy and Fault are the two most important features contributing to the out
 ### [Causal Analysis](https://github.com/McGill-MMA-EnterpriseAnalytics/Auto_Insurance_Claims/blob/main/CausalAnalysis/Causal_Inference.ipynb)
 To determine whether the important features actually had a causal relationship with the outcome “FraudFound_P” variable, we performed a Causal Analysis using DoWhy library using the features: “VehicleCategory”, “AgeOfPolicyHolder”, “DriverRating”, “PoliceReportFiled”, “Make”, “AccidentArea”, “Fault”, “PolicyType”, “VehiclePriceRange”, “PastNumberOfClaims”, “AgeOfVehicle”, “AgentType”, “NumberOfCars”, “BasePolicy”.
 A causal model was created using the as shown below, each variable was considered as a treatment variable and its effect were analyzed.
- 
+
+![image](https://user-images.githubusercontent.com/75080569/155793644-b0b8084d-68f4-4815-b6f6-7199344d6656.png)
+
 Below table summarizes the effect of all treatment variables on outcome- FraudFound_P.
-Feature	P-Values	Estimate
-Fault	0.000	-0.07
-PolicyType	0.000	-0.037
-Past Number Of Claims	0.000	-0.003
-Make	0.000	-0.001
-Vehicle Price Range	0.000	0.002
-AccidentArea	0.005	-0.027
-Base Policy	0.030	-0.042
-Age Of Vehicle	0.043	-0.004
-Police Report Filed	0.085	-0.005
-Age Of Policy Holder	0.429	-0.004
-Number Of Cars	0.434	0.001
-DriverRating	0.642	0.001
-Agent Type	0.666	-0.02
-Vehicle Category	0.856	-0.037
+
+![image](https://user-images.githubusercontent.com/75080569/155793826-41c5da08-b92e-4bd5-8eb0-c2c2248b76c8.png)
 
 The first five variables have a p-value less than 0.001, indicating a causal effect on determining a fraudulent case, but the same cannot be said about other variables.
 
