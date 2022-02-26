@@ -26,11 +26,26 @@ And our alternate hypothesis would be that the claim application is fraudulent.
 
 We will evaluate this under various analyses mentioned below.
 
-### Dataset
+### Dataset and analysis 
+
 This dataset is retrieved from Kaggle with a binary target variable, FraudFound_P, for which 1 means that the claim application is fraudulent and 0 means otherwise. 
 
 A dictionary of all the fields and their descriptions is given below:
 ![DataDictionary](https://user-images.githubusercontent.com/70802118/155792207-db6b7838-d1b4-4fbd-acb6-69dc9dcde808.PNG)
+
+We found that our data was imbalanced, the minority class (where FraudFound_P=1) was only about 6% of the enitre dataset. Thus we transformed the data with sampling in the upcoming steps.
+<img width="644" alt="Screenshot 2022-02-25 at 11 32 41 PM" src="https://user-images.githubusercontent.com/99682586/155828552-3d096ee6-7c7d-4c5f-802e-c0ef27c5bbaf.png">
+
+Following are some observations obtained on further analysis -
+
+We saw that the number of fradulent cases decreased over the years.
+<img width="815" alt="Screenshot 2022-02-25 at 11 33 51 PM" src="https://user-images.githubusercontent.com/99682586/155828601-2d61bb91-04a5-4903-b67b-5f1992ca0857.png">
+
+People in the age range 30-45 have a higher chance of having more than one car.
+<img width="818" alt="Screenshot 2022-02-25 at 11 34 27 PM" src="https://user-images.githubusercontent.com/99682586/155828610-6ca61d56-650f-406d-bb6d-26f360e893ad.png">
+
+The most common car type invloved in the accidents for fraudulent cases are Pontiac, Honda and Toyota.
+<img width="812" alt="Screenshot 2022-02-25 at 11 35 13 PM" src="https://user-images.githubusercontent.com/99682586/155828643-dba5b51b-be4f-4adf-8f83-a069461763f9.png">
 
 ### [Data Preparation](https://github.com/McGill-MMA-EnterpriseAnalytics/Auto_Insurance_Claims/blob/main/PreProcessing/Data%20Preparation.ipynb)
 
