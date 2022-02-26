@@ -153,6 +153,9 @@ The first five variables have a p-value less than 0.001, indicating a causal eff
 ### Business Application
 According to our classification model results and casual analysis, we can see that a number of factors are indicative of fraudulent claims. To incorporate the informative factors, the business application could start with an operational dashboard for insurance investigators, which informs daily classification of how many claims are predicted fraudulent by what factors and connects with the model that highlights the claims with higher risks of fraud for a closer look. Currently for most companies in the auto insurance industry, it is common to take at least 3 weeks to 6 weeks to settle one claim regardless of its risk level. Now as we are shifting to a online-focused discount strategy for a consumer market with high price elasticity of demand, manual investigation becomes relatively a lot more costly. With predictive modelling techniques, however, we believe that it could help save tremendous amount of time and money to avoid from finding risky claims among tens of thousands of claims through human eyes. After further reviews on flagged claims along with human labelling to confirm the model results or correction to void some predictions, the model could keep learning and updating to yield more accurate outputs over time. 
 
+A simple workflow is as follows:
+![Flowchart](https://user-images.githubusercontent.com/84887338/155859295-9eb8edf3-e7d2-4a43-b975-1ffad2f2e231.png)
+
 
 
 
