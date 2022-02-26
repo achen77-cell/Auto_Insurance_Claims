@@ -26,7 +26,7 @@ And our alternate hypothesis would be that the claim application is fraudulent.
 
 We will evaluate this under various analyses mentioned below.
 
-### Dataset and analysis 
+### Dataset and Analysis 
 
 This dataset is retrieved from Kaggle with a binary target variable, FraudFound_P, for which 1 means that the claim application is fraudulent and 0 means otherwise. 
 
@@ -62,7 +62,7 @@ We also convert the columns PoliceReportFiled,WitnessPresent having Yes/No value
 #### Step 3: Outlier detection
 We plotted a boxplot visualizing the various variables and on finding the column AgeOfPolicyHolder to be having potential outliers, we excluded these outliers. 
 
-#### Step 4: Feature Engineering 
+#### Step 4: Feature engineering 
  - Most of the numerical variables have already been binned in the dataset, hence, we do not need to implement binning
  - Variables like 'PolicyType' which represents interactions between 2 other variables have been preserved to check feature aggregations
  - Variables are divided into numerical and categorical variables and are encoded differently (0 for numerical and 'none' for categorical)
@@ -75,7 +75,7 @@ We impute the values looking at the columns:
 
 All the categorical variables are ordinal encoded to be fed into our model.
 
-#### Step 5: Feature Scaling
+#### Step 5: Feature scaling
 We use StandardScaler to standardize the variables which ensures that the scale across all variables is maintained.
 
 #### Step 6: Transformation pipeline
@@ -109,12 +109,12 @@ Determines neighborhoods based on distance metric.
 Quick calculation time
 Allows it to immediately adapt to new training data
 
-Performance metrics <br />
-Chosen recall as our performance metric  <br />
-Preference given to Recall over Precision as focus is on false negatives over false positives  <br />
-False negative: Claim is fraudulent but the model didnt predict it to be  <br />
-False Positive: Claim is not fraudulent but model predicted it to be  <br />
-Company is likely to incur more loses because of false negatives than false positives
+Performance metrics: <br />
+- Chosen recall as our performance metric  <br />
+- Preference given to Recall over Precision as the focus is on false negatives over false positives  <br />
+- False negative: Claim is fraudulent but the model didn't predict it to be  <br />
+- False positive: Claim is not fraudulent but model predicted it to be  <br />
+- Company is likely to incur more losses because of false negatives than false positives
 
 <img width="708" alt="Screen Shot 2022-02-23 at 10 03 05 PM" src="https://user-images.githubusercontent.com/90296247/155450034-77f7deb1-2e40-4233-9f1b-9c7016d415ac.png">
 
@@ -150,7 +150,8 @@ The first five variables have a p-value less than 0.001, indicating a causal eff
 - Ensemble Anomaly detection – Current model incurs a heavy cost as it is a supervised model, and requires each case to be investigated and analyzed to determine whether they were actually fraudulent. As an alternative option, an ensemble anomaly detection system can be designed which does not data to be tagged. 
 - Incorporate more recent and demographics data, prior customer profile like Risk profile: This can help improving the performance of the model and more accurately predicting the fraudulent cases.
 
-
+### Business Application
+According to our classification model results and casual analysis, we can see that a number of factors are indicative of fraudulent claims. To incorporate the informative factors, the business application could start with an operational dashboard for insurance investigators, which informs daily classification of how many claims are predicted fraudulent by what factors and connects with the model that highlights the claims with higher risks of fraud for a closer look. Currently for most companies in the auto insurance industry, it is common to take at least 3 weeks to 6 weeks to settle one claim regardless of its risk level. Now as we are shifting to a online-focused discount strategy for a consumer market with high price elasticity of demand, manual investigation becomes relatively a lot more costly. With predictive modelling techniques, however, we believe that it could help save tremendous amount of time and money to avoid from finding risky claims among tens of thousands of claims through human eyes. After further reviews on flagged claims along with human labelling to confirm the model results or correction to void some predictions, the model could keep learning and updating to yield more accurate outputs over time. 
 
 
 
