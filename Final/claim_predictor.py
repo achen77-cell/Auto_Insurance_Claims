@@ -69,12 +69,15 @@ def get_result(input_json):
 
     input_df = pd.DataFrame(input_json, index=[0])
     try:
-        output = score_model(input_df)
-        if output == 0:
+        output = score_model("https://adb-4970145013088722.2.azuredatabricks.net/model/best_model/Production/invocations",
+                "dapid22337b7a50862ef1aedb2d2b9d9449b-2", input_df)
+
+        if output[0] == '0':
             result = "Genuine"
         else:
             result = "Fraud"
-    except:
+    except Exception as e:
+        print(e)
         failure = True
         result = "Error"
     if failure:
@@ -89,41 +92,41 @@ def get_result(input_json):
 
 
 #test using dummy data
-input_str = {'MonthOfAccident': 'Feb',
-             'WeekOfMonthOfAccident': 3,
-             'DayOfWeekOfAccident': 'Monday',
-             'Make': 'Toyota',
-             'AccidentArea': 'Rural',
-             'DayOfWeekClaimed': 'Tuesday',
-             'MonthClaimed': 'Feb',
-             'WeekOfMonthClaimed': 3,
-             'Sex': 'Male',
-             'MaritalStatus': 'Married',
-             'AgeOfPolicyHolder': 32,
-             'Fault': 'Third Party',
-             'PolicyType': 'Sedan - All Perils',
-             'VehicleCategory': 'Sedan',
-             'VehiclePriceRange': 'less than 20000',
-             'FraudFound_P': 0,
-             'PolicyNumber': 3715,
-             'RepNumber': 10,
-             'Deductible': 400,
-             'DriverRating': 2,
-             'Days_Policy_Accident': 'more than 30',
-             'Days_Policy_Claim': 'more than 30',
-             'PastNumberOfClaims': '2 to 4',
-             'AgeOfVehicle': '6 years',
-             'AgeRangeOfPolicyHolder': '31 to 35',
-             'PoliceReportFiled': 'No',
-             'WitnessPresent': 'No',
-             'AgentType': 'External',
-             'NumberOfSuppliments': '1',
-             'AddressChange_Claim': 'no change',
-             'NumberOfCars': '1 vehicle',
-             'Year': 1994,
-             'BasePolicy': 'All Perils'}
-input_json = json.dumps(input_str)
-loaded_r = json.loads(input_json)
-print("Output Using Get_result")
-input_df = pd.DataFrame(loaded_r, index=[0])
-print(get_result(loaded_r))
+# input_str = {'MonthOfAccident': 'Feb',
+#              'WeekOfMonthOfAccident': 3,
+#              'DayOfWeekOfAccident': 'Monday',
+#              'Make': 'Toyota',
+#              'AccidentArea': 'Rural',
+#              'DayOfWeekClaimed': 'Tuesday',
+#              'MonthClaimed': 'Feb',
+#              'WeekOfMonthClaimed': 3,
+#              'Sex': 'Male',
+#              'MaritalStatus': 'Married',
+#              'AgeOfPolicyHolder': 32,
+#              'Fault': 'Third Party',
+#              'PolicyType': 'Sedan - All Perils',
+#              'VehicleCategory': 'Sedan',
+#              'VehiclePriceRange': 'less than 20000',
+#              'FraudFound_P': 0,
+#              'PolicyNumber': 3715,
+#              'RepNumber': 10,
+#              'Deductible': 400,
+#              'DriverRating': 2,
+#              'Days_Policy_Accident': 'more than 30',
+#              'Days_Policy_Claim': 'more than 30',
+#              'PastNumberOfClaims': '2 to 4',
+#              'AgeOfVehicle': '6 years',
+#              'AgeRangeOfPolicyHolder': '31 to 35',
+#              'PoliceReportFiled': 'No',
+#              'WitnessPresent': 'No',
+#              'AgentType': 'External',
+#              'NumberOfSuppliments': '1',
+#              'AddressChange_Claim': 'no change',
+#              'NumberOfCars': '1 vehicle',
+#              'Year': 1994,
+#              'BasePolicy': 'All Perils'}
+# input_json = json.dumps(input_str)
+# loaded_r = json.loads(input_json)
+# print("Output Using Get_result")
+# input_df = pd.DataFrame(loaded_r, index=[0])
+# print(get_result(loaded_r))
