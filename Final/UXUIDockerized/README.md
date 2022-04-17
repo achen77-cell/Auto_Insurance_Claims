@@ -1,4 +1,7 @@
-run the following commands \n
-docker build -t html-server-image:v1 \n
-docker run -d -p 80:80 html-server-image \n
+run the following commands
+
+docker build -t html-server-image:v1
+
+docker run -d -p 80:80 html-server-image
+
 curl localhost:80
