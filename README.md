@@ -95,32 +95,31 @@ We then proceed on the modelling phase where we applied standard machine learnin
 We have used AutoML for modelling. AutoML which stands for Automated Machine Learning is an end-to end automated process for running machine learning algorithms.
 
 Tasks covered under Auto ML:
-• Data Preparation: data cleaning, transformation, and normalization 
-• Feature Engineering: engineering new features from the existing ones when it makes sense, selecting features to include into the model. 
-• Algorithm Selection: selecting the model that works best available data.
-• Hyperparameter Optimization: tuning the most important hyperparameters for each model. 
-• Model deployment: putting the best-performing model into action
+- Data Preparation: data cleaning, transformation, and normalization 
+- Feature Engineering: engineering new features from the existing ones when it makes sense, selecting features to include into the model. 
+- Algorithm Selection: selecting the model that works best available data.
+- Hyperparameter Optimization: tuning the most important hyperparameters for each model. 
+- Model deployment: putting the best-performing model into action
 
 There are different AutoML frameworks available, and we decided to implement 2 of them:
 
 #### 1. AutoML by Databricks:
 
 #### 2. AutoML by H2o.ai:
-We also tried H2o open source AutoML.
-
+We also implemented H2o open source AutoML.
 
 ##### Steps involved:
 1. Install, import and initialize it: It can automatically check if there is an H2o instance running when we initialize it and starts the H2o cluster automatically.
 An H2O cluster consists of one or more nodes. Each node is a process split into three layers: language, algorithms, and core infrastructure. 
-
 - The first layer in the bottom section is the language layer. The language layer consists of an expression evaluation engine for R and the Scala layer.
 - The second layer is the algorithm layer. This layer contains an algorithms that are already provided in the H2O such as: XGBoost, GBM, Random Forest, K-Means etc.
 - The third layer is the core infrastructure layer that deals with resource management such as Memory and CPU management.
+
 2. Convert the dataframe into an H20 frame, and pass it on to the H2o auto ml function which performs automatic preprocessing of Imputation, one-hot encoding and standardization, and then train the model.
 3. By the leaderboard method, we can see all the models that performed the best according to various metrics and get the best model automatically.
 4. We then saved the model. There are two ways to save the leader model - binary format and MOJO format, we used the MOJO format since it's optimized for production use and used it for our predictions.
 
-#### Why and Advantages of using H2O AUtoML: 
+#### Advantages of using H2O AutoML: 
 1. It has a very simple interface for implementation - Reduce the need for expertise in machine learning by reducing the manual code-writing time.
 2. Its hyper parameter optimisation was very easy to implement. We used the hyperparameters of 
 - Max_runtime_secs: specifies the maximum time that the AutoML process will run for
@@ -136,6 +135,8 @@ An H2O cluster consists of one or more nodes. Each node is a process split into 
 #### Issues faced: 
 One problem that we experienced with H2o automl is that when it runs on a windows computer, it does not include XGBoost as one of the algorithms, and that we felt was a a limitations. This limitation did not exists when we ran it on google colab, but this was one of the learnings that we had.
 
+
+---------
 
 Models chosen mainly are tree based model as they inherently prevent overfitting and dont require feature selection explicitly. 
 - A] Random Forest
