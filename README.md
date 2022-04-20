@@ -26,6 +26,17 @@ And our alternate hypothesis would be that the claim application is fraudulent.
 
 We will evaluate this under various analyses mentioned below.
 
+### Solution Architecture
+
+We have build a tool in the form of a web application which provides an interface for the user to enter the Claim details and get prediction whther the Claim is likely to be Fraudulent or Genuine.
+The major components involved in the archtitechture are:
+!. AutoML Model - Databricks served using Azure and H20 AI AutoML
+2. FAST API - To act as a wrapper service for AutoML
+3. UI - Using ReactJS Framework
+4. Docker - To containerize the frontend and backend application.
+
+![image](https://user-images.githubusercontent.com/75080569/164144565-5801351c-eb2c-4fc9-a7f6-5195f09bd304.png)
+
 ### Dataset and Analysis 
 
 This dataset is retrieved from Kaggle with a binary target variable, FraudFound_P, for which 1 means that the claim application is fraudulent and 0 means otherwise. 
