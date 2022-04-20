@@ -116,7 +116,7 @@ There are different AutoML frameworks available, and we decided to implement 2 o
 
 #### 1. AutoML by Databricks:
 
-#### 2. AutoML by H2o.ai:
+#### 2. [AutoML by H2o.ai](https://github.com/McGill-MMA-EnterpriseAnalytics/Auto_Insurance_Claims/blob/main/AutoML/H2o/AutoML.ipynb):
 We also implemented H2o open source AutoML.
 
 ##### Steps involved:
