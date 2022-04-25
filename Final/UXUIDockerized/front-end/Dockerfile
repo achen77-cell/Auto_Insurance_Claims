@@ -1,4 +1,4 @@
-FROM node:12.14.0-slim
+FROM node:16
 
 RUN apt update && apt upgrade -y && \
     apt install gcc g++ make python git libc6-dev build-essential libpng-dev \
