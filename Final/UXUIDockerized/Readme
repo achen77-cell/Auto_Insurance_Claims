@@ -1,2 +1,4 @@
 cd Auto_Insurance_Claims/Final/UXUIDockerized/front-end
-run docker-compose build
+run docker build -t gatsby-nginx .
+run docker run --rm -it -p 8080:80 gatsby-nginx
+navigate to http://localhost:8080
