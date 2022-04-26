@@ -14,7 +14,7 @@ import Seo from "../components/seo"
 import {navigate} from "gatsby"
 
 function callAPI(claimData) {
-  fetch('http://0.0.0.0:4000/ClaimPredict/', {
+  fetch('http://localhost:4000/ClaimPredict/', {
     method: "POST",
     body: JSON.stringify(claimData),
     headers: {
