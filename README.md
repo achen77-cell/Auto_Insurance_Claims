@@ -150,7 +150,7 @@ BasePolicy and Fault are the two most important features contributing to the out
 
 <img width="685" alt="Screen Shot 2022-02-23 at 10 04 46 PM" src="https://user-images.githubusercontent.com/90296247/155450052-4d659cf5-2321-4559-8f67-e4c3d003d5c2.png">
 
-### Modeling (This Term)
+### Modeling (Alternate Approach)
 
 We have used AutoML for modelling. AutoML which stands for Automated Machine Learning is an end-to end automated process for running machine learning algorithms.
 
