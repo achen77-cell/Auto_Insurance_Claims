@@ -4,7 +4,7 @@
 ### Our Team
 
 - Xinyi Hu : Data Scientist
-- Nehal Jain : Product Manager / Backend Developer
+- Nehal Jain : Product Manager /  Data Scientist
 - Gayatri Krishnamoorthy : Data Analyst
 - Juliana Liu : Data Scientist
 - Solomon Gomez : UI Developer
